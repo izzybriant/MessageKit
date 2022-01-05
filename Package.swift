@@ -29,7 +29,7 @@ let package = Package(
     name: "MessageKit",
     platforms: [.iOS(.v12)],
     products: [
-        .library(name: "MessageKit", targets: ["MessageKit"]),
+        .library(name: "MessageKit", type: .dynamic, targets: ["MessageKit"]),
     ],
     dependencies: [
         .package(url: "https://github.com/nathantannar4/InputBarAccessoryView", .upToNextMajor(from: "5.4.0"))
@@ -37,7 +37,6 @@ let package = Package(
     targets: [
         .target(
             name: "MessageKit",
-            type: .dynamic,
             dependencies: ["InputBarAccessoryView"],
             path: "Sources",
             exclude: ["Supporting/Info.plist", "Supporting/MessageKit.h"],
