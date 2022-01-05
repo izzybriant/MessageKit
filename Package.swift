@@ -37,6 +37,7 @@ let package = Package(
     targets: [
         .target(
             name: "MessageKit",
+            type: .dynamic,
             dependencies: ["InputBarAccessoryView"],
             path: "Sources",
             exclude: ["Supporting/Info.plist", "Supporting/MessageKit.h"],
